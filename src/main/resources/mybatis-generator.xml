@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="MySql" defaultModelType="flat">
+
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
+        <jdbcConnection
+                driverClass="com.mysql.cj.jdbc.Driver"
+                connectionURL="jdbc:mysql://39.106.64.220:3306/xmeet?serverTimezone=Asia/Shanghai"
+                userId="wuxi"
+                password="0.0..0.0" />
+
+        <javaModelGenerator targetPackage="nchu.wuxi.xmeet.entity" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="nchu.wuxi.xmeet.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
+
+        <!--<table tableName="admin"/>-->
+        <!--<table tableName="customer"/>-->
+        <!--<table tableName="goods"/>-->
+        <!--<table tableName="order"/>-->
+        <!--<table tableName="order_details"/>-->
+        <!--<table tableName="payment"/>-->
+        <!--<table tableName="shopping_cat"/>-->
+        <!--<table tableName="shopping_cat_details"/>-->
+
+        <table tableName="t_customer"/>
+        <!--<table tableName="t_live_rome"/>-->
+        <!--<table tableName="t_enterprise"/>-->
+        <!--<table tableName="t_enterprise_join_apply"/>-->
+        <!--<table tableName="t_enterprise_manager"/>-->
+        <!--<table tableName="t_chat_record"/>-->
+        <!--<table tableName="t_apply_response"/>-->
+
+    </context>
+
+</generatorConfiguration>
