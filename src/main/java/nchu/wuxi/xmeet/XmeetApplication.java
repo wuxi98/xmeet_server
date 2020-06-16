@@ -26,18 +26,7 @@ public class XmeetApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        ExecutorService service = Executors.newFixedThreadPool(10);
-        service.execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    new MyServer().start(8855,new MyChatInitializer());
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        new MyServer().start(8899,new MyServerInitializer());
+        myServer.start(8855,new MyChatInitializer());
 
     }
 }

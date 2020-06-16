@@ -84,7 +84,6 @@ public class MyChatHandler extends SimpleChannelInboundHandler<TextWebSocketFram
         System.out.println("ServerHandler channelInactive()");
         // 用户断开连接后，移除channel
         ChannelContainer.getInstance().removeChannelIfConnectNoActive(ctx.channel());
-        ctx.channel().close();
     }
 
     @Override

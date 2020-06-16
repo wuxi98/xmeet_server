@@ -373,4 +373,21 @@ public class TCustomer implements Serializable {
     public void setManageEnterpriseid(Integer manageEnterpriseid) {
         this.manageEnterpriseid = manageEnterpriseid;
     }
+
+    @Override
+    public String toString() {
+        return "TCustomer{" +
+                "phone='" + phone + '\'' +
+                ", password='" + password + '\'' +
+                ", nickName='" + nickName + '\'' +
+                ", enterpriseId=" + enterpriseId +
+                ", liveRomeId=" + liveRomeId +
+                ", state='" + state + '\'' +
+                ", post='" + post + '\'' +
+                ", deptName='" + deptName + '\'' +
+                ", headUrl='" + headUrl + '\'' +
+                ", enterprisename='" + enterprisename + '\'' +
+                ", manageEnterpriseid=" + manageEnterpriseid +
+                '}';
+    }
 }

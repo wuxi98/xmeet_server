@@ -19,4 +19,5 @@ public interface CustomerService {
     RestReturn processEnterpriseApply(int enterpriseId, String phone, int code);
     RestReturn notices(String phone);
     void updateName(String phone, String name);
+    RestReturn getHeadUrl(String phone);
 }

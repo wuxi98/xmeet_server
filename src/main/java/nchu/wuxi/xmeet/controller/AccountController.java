@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -25,8 +26,8 @@ public class AccountController {
     public Object hello(){
         return ("hello");
     }
-    @RequestMapping("/login/{phone}/{password}")
-    public Object hello(@PathVariable String phone,@PathVariable String password){
+    @RequestMapping(value = "/login",method=RequestMethod.POST)
+    public Object hello(String phone, String password){
         TCustomer tCustomer = new TCustomer();
         tCustomer.setPhone(phone);
         tCustomer.setPassword(password);

@@ -185,4 +185,14 @@ public class CustomerServiceImpl implements CustomerService {
     public void updateName(String phone, String name) {
         tCustomerMapper.updateName(phone,name);
     }
+
+    @Override
+    public RestReturn getHeadUrl(String phone) {
+    TCustomerExample example = new TCustomerExample();
+        example.createCriteria().andPhoneEqualTo(phone);
+    List<TCustomer> tCustomers = tCustomerMapper.selectByExample(example);
+    List<String> list = new ArrayList<>();
+        list.add(tCustomers.get(0).getHeadUrl());
+        return new RestReturn().success(list,"success",list.size());
+}
 }

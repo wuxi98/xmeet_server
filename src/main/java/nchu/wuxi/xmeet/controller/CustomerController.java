@@ -163,4 +163,10 @@ public class CustomerController {
         System.out.println("updateName phone="+phone+",name="+name);
         customerService.updateName(phone,name);
     }
+
+    @RequestMapping(value = "/headUrl/{phone}",method = RequestMethod.GET)
+    public RestReturn getHeadUrl(@PathVariable String phone){
+        System.out.println("headUrl phone="+phone);
+        return customerService.getHeadUrl(phone);
+    }
 }

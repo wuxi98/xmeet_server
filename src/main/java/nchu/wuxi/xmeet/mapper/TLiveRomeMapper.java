@@ -63,4 +63,8 @@ public interface TLiveRomeMapper {
     int updateByExample(@Param("record") TLiveRome record, @Param("example") TLiveRomeExample example);
 
     int updataStatusById(@Param("roomId") int roomId,@Param("status") String status);
+
+    void updateNotice(@Param("roomId") int roomId,@Param("msg") String msg);
+
+    void updatePageUrl(@Param("roomId") int roomId,@Param("fullName") String fullName);
 }
